@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+
+        <div id="contenedor-juego" style="border: solid 1px; height: 400px;">
+        
+            <!--estos son los botones del tablero.-->
+            <a href="#" onclick="mover_defensor( -1 );">Izquierda</a>
+            <a href="#" onclick="mover_defensor( 1 );">Derecha</a>
+            <a href="#" onclick="mover_defensor( 0 );">Disparar</a>
+
+            <script>
+
+                var tmp_texto = "";
+                var arreglo1 = [];
+                var arreglo2 = [];
+
+                for( i = 1; i <= 10 ; i ++ )
+                {
+                    tmp_texto = "<div id='mm" + i + "'style='position: absolute;";
+                    tmp_texto += " left: " + ( i * 20 ) + " ; top: 20px;'>X</div>" ;
+
+                    document.write( tmp_texto );
+                    arreglo1[ i ] = i * 20;
+                    arreglo2[ i ] = 20;
+                }
+            </script>
+            
+
+            <!--este es el div del tanque-->
+            <div id="tk" style="position: absolute; top: 380px;">_M_</div>
+        </div>
+
+        <!--como este Javascript es mio, deberia cargarse despues de todo-->
+         <script src="operaciones.js"></script>
+    </body>
+</html>
