@@ -5,7 +5,7 @@
 
     <body>
 
-        <div id="contenedor-juego" style="border: solid 1px; height: 400px;">
+        <div id="contenedor-juego" style="border: solid 1px; height: 400px; ">
         
             <!--estos son los botones del tablero.-->
             <a href="#" onclick="mover_defensor( -1 );">Izquierda</a>
@@ -18,7 +18,8 @@
                 var arreglo1 = [];
                 var arreglo2 = [];
 
-                for( i = 1; i <= 10 ; i ++ )
+                //Agregando los marcianitos
+                for( i = 1; i <= 20 ; i ++ )
                 {
                     tmp_texto = "<div id='mm" + i + "'style='position: absolute;";
                     tmp_texto += " left: " + ( i * 20 ) + " ; top: 20px;'>X</div>" ;
@@ -28,11 +29,17 @@
                     arreglo2[ i ] = 20;
                 }
             </script>
-            
-
+            <!--este es el div de la bala-->
+            <div id="bl" style="position:absolute; top: 360px;">O</div>
             <!--este es el div del tanque-->
-            <div id="tk" style="position: absolute; top: 380px;">_M_</div>
+            <div id="tk" style="position: absolute; top: 340px;"><img src="img/tanque.jpg" width="100"; height="100"></div> 
         </div>
+        <br>
+        <form action=""> <!-- formulario para guardar los puntajes-->
+            Puntaje
+            <input type="text" name="puntaje" id="puntaje">
+            <input type="submit" value="Guardar">
+        </form>
 
         <!--como este Javascript es mio, deberia cargarse despues de todo-->
          <script src="operaciones.js"></script>
